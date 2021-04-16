@@ -12,5 +12,11 @@
 				"CoreUObject"
 			]
 		}
+	],
+	"Plugins": [
+		{
+			"Name": "WorldObject",
+			"Enabled": false
+		}
 	]
 }
