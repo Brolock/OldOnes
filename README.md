@@ -14,6 +14,8 @@ There is no queueing of animation for anything. Should probably make the widget 
 
 Known Issues:
 
+Enemies are still being deleted as soon as they are killed. That can cause cards that were still queuing for damage to refer to nullptr targets. (for example multiple iteration of damage on a single target). This should get better with animations on death that will make the Enemy wait a bit before being deleted. But with attack animations I am not sure the problem can be solved this way and gameplay should be looked at
+
 Sometimes Releasing a card from a grab doesn't work
 Sometimes Cards don't turn up when being drawn
 
