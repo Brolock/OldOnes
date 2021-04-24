@@ -8,6 +8,7 @@ Cards are assumed to ALWAYS be in Draw pile at start of a game for initializatio
 TOOD make a view of cards when right clicking them AND when right clicking a pile show all cards in there.
 More advanced hovering that show card text ability, cards in deck etc
 Make an UI to show where the pointer is at for targeting enemies / investigables
+Right now there is a HARD delay of 1 second on BP_CardMode::BeginPlay to make sure that all characters had time to instanciate and do their BeginPlay. This should be changed later probably by having all characters notify their BeginPlay and count down that they all did before BP_CardMode::BeginPlays
 
 There is no queueing of animation for anything. Should probably make the widget movement manager have its own internal clock such that each new animation starts with a tick of -0.5 compared to the previous one
 
