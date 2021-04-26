@@ -5,7 +5,19 @@ Developed with Unreal Engine 4
 Important:
 Cards are assumed to ALWAYS be in Draw pile at start of a game for initialization of View and so on. Be careful not to add cards to Discard before the game has started. They should be sent there on first turn
 
-TOOD make a view of cards when right clicking them AND when right clicking a pile show all cards in there.
+When making a card in the DataTable that targets Cards:
+Targets Restrictions on Location and type do not need a value. The tags can all be gathered with the action.
+For actions such as CardPick, Discard and Exile the attribute value of the action will always be the same on the Action Tag and the TargetingStyle Tag. They can, and should, be kept in the same AttributeTag (DataTable creation)
+On the note of CardTarget Restriction. Location and Type are both mandatory (there is an Any tag if you don't want any restriction)
+CardLocation Attribute must all be in the same AttributeTags slot (in DataTable Card creation). Since there is no value attached to those it should not cause any issue
+Same Goes for the CardType 
+It is true even for Cards you get by name (you will have to give the type of the card (or any)). This is due to the underlying card search system which first has to get all valid cards from Type and Location restrictions before looking into more restrictive conditions
+
+I do not support restrictive conditions as of yet (only card types, location and name)
+
+
+
+TOOD make a view of cards when right clicking them
 
 More advanced hovering that show card text ability, cards in deck etc
 
@@ -18,8 +30,6 @@ There is no queueing of animation for anything. Should probably make the widget 
 Enemy Icons only show the first Ability in the Ability Manager they own. Either we are ok with this. Or we change the Icon.
 
 Known Issues:
-
-Enemies are still being deleted as soon as they are killed. That can cause cards that were still queuing for damage to refer to nullptr targets. (for example multiple iteration of damage on a single target). This should get better with animations on death that will make the Enemy wait a bit before being deleted. But with attack animations I am not sure the problem can be solved this way and gameplay should be looked at
 
 Sometimes Releasing a card from a grab doesn't work
 Sometimes Cards don't turn up when being drawn
