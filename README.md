@@ -17,7 +17,7 @@ I do not support restrictive conditions as of yet (only card types, location and
 
 
 
-TOOD make a view of cards when right clicking them
+TODO make a view of cards when right clicking them
 
 More advanced hovering that show card text ability, cards in deck etc
 
@@ -37,3 +37,10 @@ Sometimes Cards don't turn up when being drawn
 Cards are not Hoverable (they dont zoom in and shine) while outside of the hand this will be an issue when cards can be picked from other places (BP_View::CardHovering)
 
 There can be only one Specifically targetable ability per cards. A queue need to be implemented: BP_AbilityTargetingManager::EventGraph > GoToNextTargetManagementInQueue
+
+
+Size of 2DArtAssets:
+Cards are 1440x2560 with no border
+Frames are 2160x3840 with 6 white border on top 10 bottom 32 on sides (tentacules)
+Pure frame: 194 top 200 botton 137 sides
+Mana / Card Types Icons are 600x600 circle shaped with 10 pixels on extremities
