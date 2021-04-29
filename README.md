@@ -44,3 +44,4 @@ Cards are 1440x2560 with no border
 Frames are 2160x3840 with 6 white border on top 10 bottom 32 on sides (tentacules)
 Pure frame: 194 top 200 botton 137 sides
 Mana / Card Types Icons are 600x600 circle shaped with 10 pixels on extremities
+EnemyHealthbar container: 1920x461. Bar starts at: Left: 181, Top: 155, bottom 300, right: 1741
