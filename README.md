@@ -2,6 +2,9 @@
 
 Developed with Unreal Engine 4
 
+On release buid Important:
+DO enable *actor Hidden in game* for the BP_RoomSetup Object before release as it will improve loading performance.
+
 Important:
 Cards are assumed to ALWAYS be in Draw pile at start of a game for initialization of View and so on. Be careful not to add cards to Discard before the game has started. They should be sent there on first turn
 
