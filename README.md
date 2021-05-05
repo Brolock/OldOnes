@@ -6,6 +6,8 @@ On release buid Important:
 DO enable *actor Hidden in game* for the BP_RoomSetup Object before release as it will improve loading performance.
 
 Important:
+DO NOT EVER touch the CardID attribute in the DataTable
+
 Cards are assumed to ALWAYS be in Draw pile at start of a game for initialization of View and so on. Be careful not to add cards to Discard before the game has started. They should be sent there on first turn
 
 When making a card in the DataTable that targets Cards:
@@ -37,10 +39,13 @@ Known Issues:
 Sometimes Releasing a card from a grab doesn't work
 Sometimes Cards don't turn up when being drawn
 
-Cards are not Hoverable (they dont zoom in and shine) while outside of the hand this will be an issue when cards can be picked from other places (BP_View::CardHovering)
-
 There can be only one Specifically targetable ability per cards. A queue need to be implemented: BP_AbilityTargetingManager::EventGraph > GoToNextTargetManagementInQueue
 
+
+!!! Big optimization!!!
+When restarting the game the player cleanse the UI and the cards in his piles for them to be refiled later by the game instance. This could be optimized with more thinking of what cards can be kept and so what views can also be kept
+It goes similarly for the Enemy actors that could be kept in memory at the end of a fight to have just their skeleton changed and their stats reseted
+!!! !!!
 
 Size of 2DArtAssets:
 Cards are 1440x2560 with no border
