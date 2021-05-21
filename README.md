@@ -8,6 +8,8 @@ DO enable *actor Hidden in game* for the BP_RoomSetup Object before release as i
 Important:
 DO NOT EVER touch the CardID attribute in the DataTable
 
+Create Socket Called WidgetSocket were you want the UI of 3D actors to attach to
+
 Cards cannot be in the hand at the start of the game they would need to be drawn
 
 When making a card in the DataTable that targets Cards:
