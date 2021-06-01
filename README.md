@@ -41,9 +41,10 @@ There is no queueing of animation. Just a small delay for widget movements. This
 Known Issues:
 
 Sometimes Releasing a card from a grab doesn't work
-Sometimes Cards don't turn up when being drawn: This has been temporarly fixed by forcing cards in hand to be face up
 
-There can be only one Specifically targetable ability per cards. A queue need to be implemented: BP_AbilityTargetingManager::EventGraph > GoToNextTargetManagementInQueue
+Sometimes Cards don't turn up when being drawn
+TEMPORARY FIX: This has been temporarly fixed by forcing cards in hand to be face up
+
 ===
 
 !!! Big optimization!!!
