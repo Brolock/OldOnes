@@ -8,9 +8,7 @@ DO enable *actor Hidden in game* for the BP_RoomSetup Object before release as i
 Important:
 DO NOT EVER touch the CardID attribute in the DataTable
 
-Create Socket Called WidgetSocket were you want the UI of 3D actors to attach to
-
-Cards cannot be in the hand at the start of the game they would need to be drawn
+Create Socket Called WidgetSocket were the UI of 3D actors should be attached
 
 When making a card in the DataTable that targets Cards:
 Targets Restrictions on Location and type do not need a value. The tags can all be gathered with the action.
@@ -41,6 +39,7 @@ There is no queueing of animation. Just a small delay for widget movements. This
 Known Issues:
 
 Sometimes Releasing a card from a grab doesn't work
+Related, The card being released from grab is handled in the BP_CardPlayerController. (The CardView somehow doesn't reliably catch when a mouse button is being released on it).
 
 Sometimes Cards don't turn up when being drawn
 TEMPORARY FIX: This has been temporarly fixed by forcing cards in hand to be face up
