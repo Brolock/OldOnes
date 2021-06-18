@@ -26,13 +26,15 @@ Allows for invest to be used as a secondary resource.
 
 TODO:
 ====
-You can still activate multiple relics at the same time and so on. This is also due to the inner ability system not taking into account the run wide / rewards nature of the game yet when checking for playability.
+Passive abilities (when applied, when removed, triggers)
+Enemy pattern / basic AI
+More complex enemy abilities (similar to card abilities)
+
+Madness system
 
 make a view of cards when right clicking them
 
 More advanced hovering that show card text ability, cards in deck etc
-
-Make an UI to show where the pointer is at for targeting enemies / investigables
 
 There is no queueing of animation. Just a small delay for widget movements. This means that a widget will not finish an animation before starting another. It can cause bugs like the one where a card doesnt get to flip before being drawn.
 
@@ -42,14 +44,13 @@ Sometimes Releasing a card from a grab doesn't work
 Related, The card being released from grab is handled in the BP_CardPlayerController. (The CardView somehow doesn't reliably catch when a mouse button is being released on it).
 
 Sometimes Cards don't turn up when being drawn
-TEMPORARY FIX: This has been temporarly fixed by forcing cards in hand to be face up
+TEMPORARY FIX: This has been temporarly fixed by forcing cards in hand to be face up (done with Tick)
 
 ===
 
-!!! Big optimization!!!
+Possible optimization
 When restarting the game the player UI the card views for them to be refiled later by the game instance. This could be optimized with more thinking of what cards and views can be kept.
 It goes similarly for the Enemy actors that could be kept in memory at the end of a fight to have just their skeleton changed and their stats reseted
-!!! !!!
 
 Size of 2DArtAssets:
 Cards are 1440x2560 with no border
